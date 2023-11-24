@@ -1,0 +1,593 @@
+body{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+nav{
+
+    background-color:#F5F5F5; 
+    height: 80px;
+}
+
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+nav ul li a{
+    color: #9b9b9b;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+li a.active, li a:hover{
+    color: black;
+    transition: .5s;
+}
+
+.checkbtn{
+    font-size: 30px;
+    color:#b1acac;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+
+.logo{
+    height: 40px;
+    line-height: 80px;
+    margin: 0px 5px;
+}
+
+
+/*HERO*/
+.hero{
+    position: relative;
+    background-color: #9b9b9b;
+    background-image: url(./img/Fondo_cabecera.png);
+    background-size: cover;
+    background-position: center center;
+    height: calc(60vh - 80px);
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Puedes ajustar la opacidad cambiando el valor de '0.5' */
+}
+
+.hero > h1{
+    font-size: 45px;
+    font-weight: 700px;
+    color:rgb(03, 188, 196);
+
+}
+
+.hero> h2{
+    font-size: 25px;
+    font-weight:lighter;
+    color:#F5F5F5;
+}
+
+
+.hero > button{
+    font-size: 25px;
+    background-color: rgb(03, 188, 196);
+    color: #F5F5F5;
+    height: 70px;
+    width: 307px;
+    border-radius: 6px;
+}
+
+.hero > button > a {
+    text-decoration: none;
+}
+
+.hero > button > a:visited {
+    color: rgb(255, 255, 255);
+  }
+
+.hero h1,h2,button {
+    position: relative;
+    z-index: 1; /* Asegúrate de que el z-index sea mayor que el z-index de la capa oscura */
+}
+
+/*************************************************/
+
+
+/* Estilos específicos para dispositivos móviles y tablets */
+
+@media only screen and (max-width: 600px) {
+    /* Ajustes generales para dispositivos móviles */
+    body {
+        font-size: 14px;
+    }
+
+    .layout {
+        padding: 10px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    nav {
+        display:flex;
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 0px;
+        margin: 0px;
+        list-style: none;
+        display: none;
+    }
+
+    nav li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+    
+    .hero >h1 {
+        font-size: 30px;
+    }
+    .hero >h2 {
+        font-size: 15px;
+    }
+
+    .services, .contacts {
+        padding: 10px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 10px;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Ajustes generales para tablets */
+    body {
+        font-size: 16px;
+    }
+
+    .layout {
+        padding: 15px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: none;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+
+    .services, .contacts {
+        padding: 15px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 15px;
+    }
+}
+
+
+
+
+/************************************************/
+
+/* SERVICES */
+.services {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    align-items: center;
+    text-align: center;
+}
+
+/* Titulares Nuestros servicios=ns Reformas integrales=ri suministros=su */
+#ns, #ri, #su {
+    color: #817E7E;
+    font-size: 38px;
+}
+
+.container_services,
+.container_reformas,
+.container_suministros {
+    background-color: #b3b3b3;
+    border-radius: 4px;
+    grid-area: content;
+    background: #ffffff;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.services_principal_termico,
+.services_principal_climatizacion,
+.services_principal_baja_tension,
+.services_secundario,
+.services_secundario_tabicado,
+.services_secundario_bajatension,
+.services_secundario_fontanería,
+.services_secundario_aluminio,
+.services_secundario_cerrajeria,
+.services_secundario_electrico,
+.services_secundario_ferreteria {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+    margin: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+    width: 260px;
+    height: 350px;
+}
+
+
+.services_principal_termico:hover,
+.services_principal_climatizacion:hover,
+.services_principal_baja_tension:hover,
+.services_secundario_tabicado:hover,
+.services_secundario_bajatension:hover,
+.services_secundario_fontanería:hover,
+.services_secundario_aluminio:hover,
+.services_secundario_cerrajeria:hover,
+.services_secundario_electrico:hover,
+.services_secundario_ferreteria:hover {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+.services_principal_termico:hover h4,
+.services_principal_climatizacion:hover h4,
+.services_principal_baja_tension:hover h4,
+.services_secundario_tabicado:hover h4,
+.services_secundario_bajatension:hover h4,
+.services_secundario_fontanería:hover h4,
+.services_secundario_aluminio:hover h4,
+.services_secundario_cerrajeria:hover h4,
+.services_secundario_electrico:hover h4,
+.services_secundario_ferreteria:hover h4 {
+    transition: transform 0.3s ease-in-out;
+    transform: scale(1.3);
+}
+
+
+.services_principal_termico {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/calefaccion.jpg);
+    color: #F3F3F3;
+}
+
+.services_principal_climatizacion {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/Climatizacion.jpg);
+    color: #F3F3F3;
+}
+
+.services_principal_baja_tension {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/baja\ tensión.jpg);
+    color: #F3F3F3;
+}
+
+.services_secundario_tabicado {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/tabicado.jpg);
+    color: #F3F3F3;
+}
+
+.services_secundario_bajatension {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/baja\ tensión.jpg);
+    color: #F3F3F3;
+}
+
+.services_secundario_fontanería {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/fontaneria.png);
+    color: #F3F3F3;
+}
+
+.services_secundario_aluminio {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/ferreteria.jpg);
+    color: #F3F3F3;
+}
+
+.services_secundario_cerrajeria {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ),url(./img/cerrajeria.jpg);
+    color: #F3F3F3;
+}
+
+.services_secundario_electrico {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/material\ electrico.jpg);
+    color: #F3F3F3;
+}
+
+.services_secundario_ferreteria {
+    background-image: linear-gradient(
+        rgba(0, 184, 156, 0.5),
+        rgb(190, 190, 190)
+    ), url(./img/ferreteria.jpg);
+    color: #F3F3F3;
+}
+
+.container_suministros {
+    background: #d3d3d3;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px #ddd;
+    margin: 20px auto;
+    width: 1200px;
+    height: 350px;
+    justify-content: center;
+    grid-area: content;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.container_suministros ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+
+/**********CONTACTO*****************/
+
+.contacts {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide en dos columnas al 50% */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+.map {
+    grid-column: 1; /* Coloca el contenido de "map" en la primera columna */
+}
+
+.form {
+    grid-column: 2; /* Coloca el contenido de "form" en la segunda columna */
+}
+
+
+
+.contacts {
+    display: flex;
+    flex-wrap: wrap;
+    background: #F3F3F3;
+    padding-bottom: 10px;
+
+  }
+  
+  .map {
+    flex: 1;
+    box-sizing: border-box;
+
+  }
+  
+  .map article {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .map h5 {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .map p {
+    color: #555;
+  }
+  
+  .map iframe {
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .form {
+    flex: 1;
+    box-sizing: border-box;
+    margin: 10px;
+  }
+  
+  .form h3 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: #817E7E;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .contact-form-group {
+    margin-bottom: 15px;
+  }
+  
+  .contact-form-submit {
+    background-color: rgb(03, 188, 196);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-form-submit:hover {
+    background-color: rgb(03, 188, 196);;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .map,
+    .form {
+      flex: 100%;
+    }
+  }
+
+  input[type=text], select, textarea{
+    width: 100%;
+    padding: 12px 20px;
+    border: #555;
+  }
+  
+  .footer{
+    display: flex;
+    width: 100%;
+    background: #827F7F;
+    color: #F3F3F3;
+    height: 71px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+
+
+
+.menu_footer{
+
+    background-color:#F5F5F5; 
+    height: 80px;
+}
+
+
+.menu_footer ul{
+    float: left;
+    margin-right: 20px;
+}
+
+.menu_footer ul li{
+    display: inline-block;
+    line-height: 40px;
+    margin: 0 5px;
+}
+
+.menu_footer ul li a{
+    color: #9b9b9b;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.menu_footer li a.active, li a:hover{
+    color: black;
+    transition: .5s;
+}
+
+.cookie-banner {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.cookie-banner p {
+    margin: 0;
+}
+
+.cookie-banner button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
