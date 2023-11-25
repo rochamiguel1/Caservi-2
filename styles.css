@@ -1,70 +1,78 @@
-body{
+body {
     width: 100%;
     background-color: rgb(255, 255, 255);
     font-family: 'Montserrat', sans-serif;
 }
 
 
-nav{
-
-    background-color:#F5F5F5; 
+nav {
+    /* cambio display flex agregue justify y align */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F5F5F5;
     height: 80px;
+
 }
 
 
-nav ul{
+nav ul {
     float: right;
     margin-right: 20px;
 }
 
-nav ul li{
+nav ul li {
     display: inline-block;
     line-height: 40px;
     margin: 0 5px;
 }
 
-nav ul li a{
+nav ul li a {
     color: #9b9b9b;
     font-size: 18px;
-    padding: 7px 13px;
+    /* padding: 7px 13px; */
     border-radius: 3px;
     text-decoration: none;
+    margin-right: 20px;
 }
 
-li a.active, li a:hover{
+li a.active,
+li a:hover {
     color: black;
     transition: .5s;
 }
 
-.checkbtn{
+.checkbtn {
     font-size: 30px;
-    color:#b1acac;
+    color: #b1acac;
     float: right;
     line-height: 80px;
     margin-right: 40px;
-    cursor:pointer;
+    cursor: pointer;
     display: none;
 }
 
-#check{
+#check {
     display: none;
 }
 
 
-.enlace{
+/* .enlace {
     position: absolute;
     padding: 20px 50px;
-}
+} */
 
-.logo{
+.logo {
+    display: flex;
+    align-items: center;
     height: 40px;
     line-height: 80px;
-    margin: 0px 5px;
+    margin-left: 30px;
 }
 
 
 /*HERO*/
-.hero{
+.hero {
     position: relative;
     background-color: #9b9b9b;
     background-image: url(./img/Fondo_cabecera.png);
@@ -84,24 +92,25 @@ li a.active, li a:hover{
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.5); /* Puedes ajustar la opacidad cambiando el valor de '0.5' */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Puedes ajustar la opacidad cambiando el valor de '0.5' */
 }
 
-.hero > h1{
+.hero>h1 {
     font-size: 45px;
     font-weight: 700px;
-    color:rgb(03, 188, 196);
+    color: rgb(03, 188, 196);
 
 }
 
-.hero> h2{
+.hero>h2 {
     font-size: 25px;
-    font-weight:lighter;
-    color:#F5F5F5;
+    font-weight: lighter;
+    color: #F5F5F5;
 }
 
 
-.hero > button{
+.hero>button {
     font-size: 25px;
     background-color: rgb(03, 188, 196);
     color: #F5F5F5;
@@ -110,120 +119,31 @@ li a.active, li a:hover{
     border-radius: 6px;
 }
 
-.hero > button > a {
+.hero>button>a {
     text-decoration: none;
 }
 
-.hero > button > a:visited {
+.hero>button>a:visited {
     color: rgb(255, 255, 255);
-  }
+}
 
-.hero h1,h2,button {
+.hero h1,
+h2,
+button {
     position: relative;
-    z-index: 1; /* Asegúrate de que el z-index sea mayor que el z-index de la capa oscura */
+    z-index: 1;
+    /* Asegúrate de que el z-index sea mayor que el z-index de la capa oscura */
 }
 
-/*************************************************/
-
-
-/* Estilos específicos para dispositivos móviles y tablets */
-
-@media only screen and (max-width: 600px) {
-    /* Ajustes generales para dispositivos móviles */
-    body {
-        font-size: 14px;
-    }
-
-    .layout {
-        padding: 10px;
-    }
-
-    header {
-        text-align: center;
-    }
-
-    nav {
-        display:flex;
-        text-align: center;
-    }
-
-    nav ul {
-        padding: 0px;
-        margin: 0px;
-        list-style: none;
-        display: none;
-    }
-
-    nav li {
-        display: block;
-        margin-bottom: 10px;
-    }
-
-    .hero {
-        text-align: center;
-    }
-    
-    .hero >h1 {
-        font-size: 30px;
-    }
-    .hero >h2 {
-        font-size: 15px;
-    }
-
-    .services, .contacts {
-        padding: 10px;
-    }
-
-    .footer {
-        text-align: center;
-        padding: 10px;
-    }
+/* cambie la clase por id por que no le afectaba los cambios para hacerlo responsives */
+#menu_footer a {
+    display: flex;
+    font-size: 18px;
+    line-height: 80px;
 }
 
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-    /* Ajustes generales para tablets */
-    body {
-        font-size: 16px;
-    }
 
-    .layout {
-        padding: 15px;
-    }
 
-    header {
-        text-align: center;
-    }
-
-    nav {
-        display: block;
-        text-align: center;
-    }
-
-    nav ul {
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        display: none;
-    }
-
-    nav li {
-        display: inline-block;
-        margin-right: 20px;
-    }
-
-    .hero {
-        text-align: center;
-    }
-
-    .services, .contacts {
-        padding: 15px;
-    }
-
-    .footer {
-        text-align: center;
-        padding: 15px;
-    }
-}
 
 
 
@@ -239,7 +159,9 @@ li a.active, li a:hover{
 }
 
 /* Titulares Nuestros servicios=ns Reformas integrales=ri suministros=su */
-#ns, #ri, #su {
+#ns,
+#ri,
+#su {
     color: #817E7E;
     font-size: 38px;
 }
@@ -319,82 +241,62 @@ li a.active, li a:hover{
 
 
 .services_principal_termico {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/calefaccion.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/calefaccion.jpg);
     color: #F3F3F3;
 }
 
 .services_principal_climatizacion {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/Climatizacion.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/Climatizacion.jpg);
     color: #F3F3F3;
 }
 
 .services_principal_baja_tension {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/baja\ tensión.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/baja\ tensión.jpg);
     color: #F3F3F3;
 }
 
 .services_secundario_tabicado {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/tabicado.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/tabicado.jpg);
     color: #F3F3F3;
 }
 
 .services_secundario_bajatension {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/baja\ tensión.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/baja\ tensión.jpg);
     color: #F3F3F3;
 }
 
 .services_secundario_fontanería {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/fontaneria.png);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/fontaneria.png);
     color: #F3F3F3;
 }
 
 .services_secundario_aluminio {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/ferreteria.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/ferreteria.jpg);
     color: #F3F3F3;
 }
 
 .services_secundario_cerrajeria {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ),url(./img/cerrajeria.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/cerrajeria.jpg);
     color: #F3F3F3;
 }
 
 .services_secundario_electrico {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/material\ electrico.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/material\ electrico.jpg);
     color: #F3F3F3;
 }
 
 .services_secundario_ferreteria {
-    background-image: linear-gradient(
-        rgba(0, 184, 156, 0.5),
-        rgb(190, 190, 190)
-    ), url(./img/ferreteria.jpg);
+    background-image: linear-gradient(rgba(0, 184, 156, 0.5),
+            rgb(190, 190, 190)), url(./img/ferreteria.jpg);
     color: #F3F3F3;
 }
 
@@ -424,19 +326,21 @@ li a.active, li a:hover{
 
 .contacts {
     display: grid;
-    grid-template-columns: 1fr 1fr; /* Divide en dos columnas al 50% */
-    gap: 20px; /* Espacio entre las columnas */
+    grid-template-columns: 1fr 1fr;
+    /* Divide en dos columnas al 50% */
+    gap: 20px;
+    /* Espacio entre las columnas */
 }
 
 .map {
-    grid-column: 1; /* Coloca el contenido de "map" en la primera columna */
+    grid-column: 1;
+    /* Coloca el contenido de "map" en la primera columna */
 }
 
 .form {
-    grid-column: 2; /* Coloca el contenido de "form" en la segunda columna */
+    grid-column: 2;
+    /* Coloca el contenido de "form" en la segunda columna */
 }
-
-
 
 .contacts {
     display: flex;
@@ -444,87 +348,372 @@ li a.active, li a:hover{
     background: #F3F3F3;
     padding-bottom: 10px;
 
-  }
-  
-  .map {
+}
+
+.map {
     flex: 1;
     box-sizing: border-box;
 
-  }
-  
-  .map article {
+}
+
+.map article {
     background-color: #f5f5f5;
     padding: 15px;
     border-radius: 8px;
-  }
-  
-  .map h5 {
+}
+
+.map h5 {
     color: #000000;
     font-size: 18px;
     font-weight: 400;
-  }
-  
-  .map p {
+}
+
+.map p {
     color: #555;
-  }
-  
-  .map iframe {
+}
+
+.map iframe {
     width: 100%;
     height: 300px;
     border: 1px solid #ddd;
     border-radius: 8px;
-  }
-  
-  .form {
+}
+
+.form {
     flex: 1;
     box-sizing: border-box;
-    margin: 10px;
-  }
-  
-  .form h3 {
+    margin: 5px;
+
+}
+
+.form h3 {
+    display: flex;
     text-align: center;
     font-size: 36px;
     font-weight: 700;
     font-family: 'Montserrat', sans-serif;
     color: #817E7E;
-  }
-  
-  .contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-  .contact-form-group {
-    margin-bottom: 15px;
-  }
-  
-  .contact-form-submit {
-    background-color: rgb(03, 188, 196);
-    color: white;
-    padding: 10px 15px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.25rem;
+   
+}
+.contact-form-group {
+    display: grid;
+    flex-direction: row;
+    margin: 10px;
+}
+/* .contact-form input, */
+.contact-form textarea,
+.contact-form select {
+    border-radius: 7px;
     border: none;
-    border-radius: 5px;
+    height: 25px;
+    padding: 5px 10px;
+}
+.contact-form textarea {
+    height: auto;
+    resize: vertical;
+}
+.contact-form-submit {
+    justify-items: center;
+    align-self: center;
+    margin: 10px;
+    height: 36.9px;
+    width: 68.14px;
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
-  }
+    background-color: rgb(03, 188, 196);
+    color: #ffffff;
+    
+}
+
+.autorizar{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+/*************************************************/
+/* Miguel  */
+@media only screen and (max-width: 480px) {
   
-  .contact-form-submit:hover {
-    background-color: rgb(03, 188, 196);;
-  }
-  
-  @media only screen and (max-width: 768px) {
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .logo {
+        height: 30px;
+    }
+
+    nav ul {
+        display: flex;
+        margin-right: 5px;
+    }
+
+    nav ul li a {
+        font-size: 15px;
+        margin-right: 1px;
+    }
+
+    .hero {
+        text-align: center;
+    }
+    .hero>h1 {
+        font-size: 28px;
+    }
+
+    .hero>h2 {
+        font-size: 15px;
+    }
+
+    .services,
+    .contacts {
+        padding: 10px;
+    }
+
+    .footer {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #menu_footer a {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        text-align: center;
+        line-height: 20px;
+        font-size: 15px;
+
+    }
+
+    .form {
+        flex: 1;
+        box-sizing: border-box;
+        margin: 5px;
+    }
+
+    .form h3 {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 22px;
+    }
+
+    .contact-form {
+        display: flex;
+        
+    }
+
+    .contact-form-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 3px;
+    }
+
+    /* .contact-form input, */
+    .contact-form textarea,
+    .contact-form select {
+        border-radius: 7px;
+        border: none;
+        height: 1.5625rem;
+        padding: 5px 10px;
+    }
+
+    .contact-form textarea {
+        height: auto;
+        resize: vertical;
+    }
+
+    .contact-form-submit {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+      
+    }
+    .autorizar{
+        display: flex;
+        gap: 2px;
+        width: 350px;
+    }
+
+    #ns,
+#ri,
+#su {
+   
+    font-size: 22px;
+}
+    
+}
+
+
+/* Estilos específicos para dispositivos móviles y tablets */
+
+
+@media only screen and (min-width:481px) and (max-width: 720px) {
+
+    /* Ajustes generales para dispositivos móviles */
+    /* body {
+        font-size: 14px;
+    } */
+
+    .layout {
+        padding: 10px;
+    }
+
+   
+
+    nav ul li a {
+        font-size: 15px;
+        margin-right: 8px;
+    }
+
+    .logo {
+        height: 30px;
+    }
+    .hero {
+        text-align: center;
+    }
+
+   
+    .hero>h1 {
+        font-size: 28px;
+    }
+
+    .hero>h2 {
+        font-size: 15px;
+    }
+
+    .services,
+    .contacts {
+        padding: 10px;
+    }
+
+    .menu_footer {
+        display: flex;
+    }
+
+    /* .footer {
+        text-align: center;
+        padding: 10px;
+    } */
+
+    #menu_footer a {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        text-align: center;
+        line-height: 20px;
+        font-size: 15px;
+        width: auto;
+
+    }
+
+ 
+    .form {
+        flex: 1;
+        box-sizing: border-box;
+        margin: 5px;
+
+    }
+
+    .form h3 {
+        display: flex;
+        text-align: center;
+        font-size: 28px;
+        
+    }
+
+    .contact-form {
+        display: flex;
+        width: auto;
+
+    }
+
+    .contact-form-group {
+        flex-direction: column;
+        justify-content: center;
+        display: flex;
+        gap: 3px;
+    }
+
+    /* .contact-form input, */
+    .contact-form textarea,
+    .contact-form select {
+        border-radius: 7px;
+        border: none;
+        height: 1.5625rem;
+        padding: 5px 10px;
+    }
+
+    .contact-form textarea {
+        height: auto;
+        resize: vertical;
+    }
+
+
+   .contact-form-submit {
+        display: flex;
+        justify-content: center;
+        align-self: center;
+      
+    }
+    .contact-form-submit {
+        display: flex;
+        align-self: center;
+        margin-bottom: 10px;
+        height: 1.875rem;
+        width: 4.375rem;
+        border-radius: 10px;
+        font-weight: 700;
+        cursor: pointer;
+    }
+
+
+    #ns,
+#ri,
+#su {
+   
+    font-size: 28px;
+}
+
+}
+
+@media only screen and (min-width:721px) and (max-width: 1024px) {
+
     .map,
     .form {
-      flex: 100%;
+        flex: 100%;
     }
-  }
+}
 
-  input[type=text], select, textarea{
-    width: 100%;
+.hero>button {
+    font-size: 25px;
+    background-color: rgb(03, 188, 196);
+    color: #F5F5F5;
+    height: 70px;
+    width: 307px;
+    border-radius: 6px;
+}
+
+input[type=text],
+select,
+textarea {
+    /* width: 100%; */
     padding: 12px 20px;
     border: #555;
-  }
-  
-  .footer{
+}
+
+.footer {
     display: flex;
     width: 100%;
     background: #827F7F;
@@ -533,29 +722,29 @@ li a.active, li a:hover{
     align-items: center;
     text-align: center;
     justify-content: center;
-  }
+}
 
 
 
-.menu_footer{
+.menu_footer {
 
-    background-color:#F5F5F5; 
+    background-color: #F5F5F5;
     height: 80px;
 }
 
 
-.menu_footer ul{
+.menu_footer ul {
     float: left;
     margin-right: 20px;
 }
 
-.menu_footer ul li{
+.menu_footer ul li {
     display: inline-block;
     line-height: 40px;
     margin: 0 5px;
 }
 
-.menu_footer ul li a{
+.menu_footer ul li a {
     color: #9b9b9b;
     font-size: 18px;
     padding: 7px 13px;
@@ -563,7 +752,8 @@ li a.active, li a:hover{
     text-decoration: none;
 }
 
-.menu_footer li a.active, li a:hover{
+.menu_footer li a.active,
+li a:hover {
     color: black;
     transition: .5s;
 }
@@ -591,3 +781,6 @@ li a.active, li a:hover{
     border: none;
     cursor: pointer;
 }
+
+
+
