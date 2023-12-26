@@ -9,6 +9,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
     <link rel="icon" href="./favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
     <title>Caservi Mantenimientos Generales</title>
@@ -16,10 +17,11 @@
 
 <body>
 
-    <div class="layout">
-        <header>
+    <div class="container">
+
+        <header class="hero">
             <nav>
-                <a href="./index.html" class="enlace">
+                <a href="./index.html">
                     <img src="./img/Caservi01_Mesa de trabajo 1.png" alt="" class="logo">
                 </a>
                 <ul>
@@ -28,149 +30,177 @@
                     <li><a href="#contact">Contacto</a></li>
                 </ul>
             </nav>
-
-            <section class="hero" id="hero">
-                <h1>DEJA QUE TUS SUEÑOS SEAN NUESTRO PROYECTO</h1>
-                <h2>MANTENIMIENTO DE INSTALACIONES Y REFORMAS INTEGRALES</h2>
-                <h2 class="sostenible">INGENIERÍA SOSTENIBLE</h2>
-                <button><a href="#contact">Cuéntanos tu caso</a></button>
-            </section>
         </header>
 
-        <section class="services" id="services">
-            <h3 id="ns">INSTALACIONES Y MANTENIMIENTOS</h3>
-            <div class="container_services">
-                <div class="services_principal_termico">
-                    <h4>INSTALACIONES TÉRMICAS</h4>
-                </div>
-                <div class="services_principal_climatizacion">
-                    <h4>SISTEMAS DE CLIMATIZACIÓN</h4>
-                </div>
-                <div class="services_principal_baja_tension">
-                    <h4>LÍNEAS DE BAJA TENSIÓN</h4>
-                </div>
-            </div>
-            <h3 id="ri">REFORMAS INTEGRALES</h3>
-            <div class="container_reformas">
+        <section class="presentacion">
+            <h1>DEJA QUE TUS SUEÑOS SEAN NUESTRO PROYECTO</h1>
+            <h2>MANTENIMIENTO DE INSTALACIONES Y REFORMAS INTEGRALES</h2>
+            <h2 class="sostenible">INGENIERÍA SOSTENIBLE</h2>
+            <button><a href="#contact">Cuéntanos tu caso</a></button>
+        </section>
 
-                <div class="services_secundario_tabicado">
-                    <h4>ALBAÑILERÍA</h4>
+        <div class="contenedor">
+            <h3 id="ns">INSTALACIONES Y MANTENIMIENTOS</h3>
+
+            <div class="div1">
+
+                <div class="miDiv1" id="services_principal_termico">
+                    <p>INSTALACIONES TÉRMICAS </p>
                 </div>
-                <div class="services_secundario_bajatension">
-                    <h4>BAJA TENSIÓN <br>Y ELECTRICIDAD</h4>
+                <div class="miDiv1" id="services_principal_climatizacion">
+                    <p>SISTEMAS DE <br>CLIMATIZACIÓN </p>
                 </div>
-                <div class="services_secundario_fontanería">
-                    <h4>FONTANERÍA</h4>
+                <div class="miDiv1" id="services_principal_baja_tension">
+                    <p>LÍNEAS DE BAJA TENSIÓN </p>
                 </div>
-                <div class="services_secundario_aluminio">
-                    <h4>ALUMINIO Y CRISTALERÍA</h4>
+
+            </div>
+
+            <h3 id="ri">REFORMAS INTEGRALES</h3>
+
+            <div class="div2">
+
+                <div class="miDiv2" id="services_secundario_tabicado">
+                    <p>ALBAÑILERÍA</p>
                 </div>
-                <div class="services_secundario_cerrajeria">
-                    <h4>CERRAJERÍA</h4>
+                <div class="miDiv2" id="services_secundario_bajatension">
+                    <p>BAJA TENSIÓN <br>Y ELECTRICIDAD</p>
+                </div>
+                <div class="miDiv2" id="services_secundario_fontanería">
+                    <p>FONTANERÍA</p>
                 </div>
             </div>
+
+            <div class="div3">
+
+                <div class="miDiv3" id="services_secundario_aluminio">
+                    <p>ALUMINIO Y CRISTALERÍA</p>
+                </div>
+                <div class="miDiv3" id="services_secundario_cerrajeria">
+                    <p>CERRAJERÍA</p>
+                </div>
+            </div>
+
 
             <h3 id="su">SUMINISTROS</h3>
 
-            <div class="container_reformas">
-                <div class="services_secundario_ferreteria">
-                    <h4>FERRETERÍA</h4>
+            <div class="div4">
+
+                <div class="miDiv4" id="services_secundario_aluminio">
+                    <p>FERRETERÍA</p>
                 </div>
-                <div class="services_secundario_fontanería">
-                    <h4>FONTANERÍA</h4>
+                <div class="miDiv4" id="services_secundario_fontanería">
+                    <p>FONTANERÍA</p>
                 </div>
-                <div class="services_secundario_electrico">
-                    <h4>MATERIAL ELÉCTRICO</h4>
+                <div class="miDiv4" id="services_secundario_electrico">
+                    <p>MATERIAL ELÉCTRICO</p>
                 </div>
             </div>
-            <div class="contacts" id="contact">
-                <div class="map">
-                    <article class="map">
-                        <h5>Dirección</h5>
-                        <p>Calle Manuel Maroto 62</p>
-                        <h5>Correo</h5>
-                        <p>caservi@caservi.es</p>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.967306363122!2d-3.6702577999999995!3d40.3874172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42267199449989%3A0xbb49eea2bc04ccf1!2sC.%20de%20Manuel%20Maroto%2C%2062%2C%2028053%20Madrid!5e0!3m2!1ses!2ses!4v1700554292098!5m2!1ses!2ses"
-                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"></iframe>
-
-                    </article>
-                </div>
+           
+        </div>
 
 
-                <article class="form">
-                    <h3>CONTACTA CON NOSOTROS</h3>
-                    <form class="contact-form" id="section1" action='https://formsubmit.co/caservi@caservi.es'
-                        method='POST'>
-                        <div class="contact-form-group">
-                            <input required type="text" name="name" id="name" placeholder="Nombre">
-                        </div>
-                        <div class="contact-form-group">
-                            <input required type="text" name="email" id="email" placeholder="Correo">
-                        </div>
-                        <div class="contact-form-group">
-                            <input required type="text" name="phone" id="phone" placeholder="Telefono">
-                        </div>
 
-                        <div class="contact-form-group">
-                            <select required name="servicios" id="servicios">
-                                <option value=""></option>
-                                <option value="termico">Mantenimiento Térmico</option>
-                                <option value="clima">Climatización</option>
-                                <option value="baja tension">Líneas de Baja Tensión</option>
-                                <option value="tabicado">Tabicado</option>
-                                <option value="electricidad">Baja Tensión/Electricidad</option>
-                                <option value="fontaneria">Fontanería</option>
-                                <option value="aluminio">Aluminio y Cristalería</option>
-                                <option value="cerrajeria">Cerrajería</option>
-                                <option value="ferreteria">Suministros de material eléctrico de fontanería y ferretería
-                                </option>
-                            </select>
-                        </div>
-                        <div class="contact-form-group">
-                            <textarea required name="mensaje" id="mensaje" rows="10"
-                                placeholder="Dejanos tu mensaje"></textarea>
-                        </div>
-                        <div class="autorizar ">
-                            <input type="checkbox" name="agree" id="agree" />
-                            <label htmlFor="agree">Acepto la Política de Privacidad y los Términos y
-                                condiciones.</label>
-                        </div>
-                        <input class="contact-form-submit" type="submit" name="Enviar" value="enviar" />
-
-                        <!-- redirige nuevamente a la página señalada después de enviar el formulario -->
-                        <input type="hidden" name="_next" value="https://caservi.es" />
-                    </form>
-
-                </article>
-            </div>
-
-
-            <nav class="menu_footer" id="menu_footer">
-                <ul>
-                    <li><a href="privacidad.html">Privacidad</a></li>
-                    <li><a href="./avisolegal.html">Aviso Legal</a></li>
-                    <li><a href="./cookies.html">Cookies</a></li>
-                </ul>
-            </nav>
     </div>
 
+    <div class="contact">
+        <div class="map">
+            <article class="map">
+                <h5>Dirección</h5>
+                <p>Calle Manuel Maroto 62</p>
+                <h5>Correo</h5>
+                <p>caservi@caservi.es</p>
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.967306363122!2d-3.6702577999999995!3d40.3874172!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42267199449989%3A0xbb49eea2bc04ccf1!2sC.%20de%20Manuel%20Maroto%2C%2062%2C%2028053%20Madrid!5e0!3m2!1ses!2ses!4v1700554292098!5m2!1ses!2ses"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </article>
+        </div>
 
-    <footer class="footer">
+        <div class="form">
+            <h3>CONTACTA CON NOSOTROS</h3>
+            <form class="contact-form" id="section1" action='https://formsubmit.co/caservi@caservi.es' method='POST'>
+                <div class="contact-form-group">
+                    <input required type="text" name="name" id="name" placeholder="Nombre">
+                </div>
+                <div class="contact-form-group">
+                    <input required type="text" name="email" id="email" placeholder="Correo">
+                </div>
+                <div class="contact-form-group">
+                    <input required type="text" name="phone" id="phone" placeholder="Telefono">
+                </div>
+
+                <div class="contact-form-group">
+                    <select required name="servicios" id="servicios" placeholder="Servicio requerido">
+                        <option value=""></option>
+                        <option value="termico">Mantenimiento Térmico</option>
+                        <option value="clima">Climatización</option>
+                        <option value="baja tension">Líneas de Baja Tensión</option>
+                        <option value="tabicado">Tabicado</option>
+                        <option value="electricidad">Baja Tensión/Electricidad</option>
+                        <option value="fontaneria">Fontanería</option>
+                        <option value="aluminio">Aluminio y Cristalería</option>
+                        <option value="cerrajeria">Cerrajería</option>
+                        <option value="ferreteria">Suministros de material eléctrico de fontanería y ferretería
+                        </option>
+                    </select>
+                </div>
+                <div class="contact-form-group">
+                    <textarea required name="mensaje" id="mensaje" rows="10"
+                        placeholder="Dejanos tu mensaje"></textarea>
+                </div>
+                <div class="autorizar ">
+                    <input type="checkbox" name="agree" id="agree" />
+                    <label htmlFor="agree">Acepto la Política de Privacidad y los Términos y
+                        condiciones.</label>
+                </div>
+                <input class="contact-form-submit" type="submit" name="Enviar" value="enviar" />
+
+
+                <input type="hidden" name="_next" value="https://caservi.es" />
+            </form>
+
+        </div>
+
+    </div>
+    <nav class="menu_footer" id="menu_footer">
+        <ul>
+            <li><a href="privacidad.html">Privacidad</a></li>
+            <li><a href="./avisolegal.html">Aviso Legal</a></li>
+            <li><a href="./cookies.html">Cookies</a></li>
+        </ul>
+        <div class="certificados">
+
+            <a href="./iso9001.html">
+                <img src="./img/9001.jpg" alt="9001">
+            </a>
+            <a href="./iso14001.html">
+                <img src="./img/14001.jpg" alt="14001">
+            </a>
+            <a href="./iso45001.html">
+                <img src="./img/45001.JPG" alt="45001">
+            </a>
+
+        </div>
+
+    </nav>
+
+    <footer>
         <section class="copyright">Todos los derechos reservados ©Caservi.es 2023</section>
     </footer>
 
 
 
-
     <!-- Banner de cookies -->
     <div id="cookieBanner" class="cookie-banner">
-        <p>Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.</p>
+        <p>Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.
+        </p>
         <button onclick="aceptarCookies()">Aceptar Cookies</button>
     </div>
 
     <script src="script.js"></script>
+
 
 
 
